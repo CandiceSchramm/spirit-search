@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import SearchResults from "./components/SearchResults";
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4">Let's Search</h1>
+            <p className="lead">Find what you're looking for with ease!</p>
+            <div className="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Enter sprit name here" aria-label="liquor-name" aria-describedby="basic-addon2" />
+              <div className="input-group-append">
+                <button className="btn btn-outline-secondary" type="button">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <SearchResults/>
       </div>
     );
   }
